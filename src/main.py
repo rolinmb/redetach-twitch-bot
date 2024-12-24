@@ -17,6 +17,8 @@ async def on_command(cmd: ChatCommand):
     command = cmd.name.lower()
     if command == "re":
         await cmd.reply("REEEEEEEEEEEEEEEEEEEEEEE")
+    elif command == "detach":
+        await cmd.reply("UNGABUNGUH")
     else:
         await cmd.reply(f"Unknown command: {command}")
 
@@ -41,6 +43,7 @@ async def run_bot():
     chat.register_event(ChatEvent.READY, on_ready)
     chat.register_event(ChatEvent.MESSAGE, on_message)
     chat.register_command("re", on_command)
+    chat.register_command("detach", on_command)
 
     try:
         chat.start()
