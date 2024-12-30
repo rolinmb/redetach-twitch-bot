@@ -16,9 +16,15 @@ async def on_message(msg: ChatMessage):
 async def on_command(cmd: ChatCommand):
     command = cmd.name.lower()
     if command == "re":
-        await cmd.reply("REEEEEEEEEEEEEEEEEEEEEEE")
+        await cmd.reply("REEEEEEEEEEEEEEEEEEEEEEE!!!!!")
+    elif command == "guh":
+        await cmd.reply("GUH!")
     elif command == "detach":
-        await cmd.reply("UNGABUNGUH")
+        await cmd.reply("~ im ousside my bodie ~")
+    elif command == "discord":
+        await cmd.reply("https://discord.gg/qcsJPjQ8")
+    elif command == "site":
+        await cmd.reply("https://redetach-music.web.app")
     else:
         await cmd.reply(f"Unknown command: {command}")
 
@@ -43,7 +49,10 @@ async def run_bot():
     chat.register_event(ChatEvent.READY, on_ready)
     chat.register_event(ChatEvent.MESSAGE, on_message)
     chat.register_command("re", on_command)
+    chat.register_command("guh", on_command)
     chat.register_command("detach", on_command)
+    chat.register_command("discord", on_command)
+    chat.register_command("site", on_command)
 
     try:
         chat.start()
