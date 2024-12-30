@@ -23,8 +23,10 @@ async def on_command(cmd: ChatCommand):
         await cmd.reply("~ im ousside my bodie ~")
     elif command == "discord":
         await cmd.reply("https://discord.gg/qcsJPjQ8")
-    elif command == "site":
+    elif command == "links":
         await cmd.reply("https://redetach-music.web.app")
+    elif command == "lenny":
+        await cmd.reply("( ͡° ͜ʖ ͡°)")
     else:
         await cmd.reply(f"Unknown command: {command}")
 
@@ -52,7 +54,8 @@ async def run_bot():
     chat.register_command("guh", on_command)
     chat.register_command("detach", on_command)
     chat.register_command("discord", on_command)
-    chat.register_command("site", on_command)
+    chat.register_command("links", on_command)
+    chat.register_command("lenny", on_command)
 
     try:
         chat.start()
