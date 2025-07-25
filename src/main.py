@@ -21,10 +21,6 @@ async def on_command(cmd: ChatCommand):
         await cmd.reply("GUH!")
     elif command == "detach":
         await cmd.reply("~ im ousside my bodie ~")
-    elif command == "discord":
-        await cmd.reply("https://discord.gg/qcsJPjQ8")
-    elif command == "links":
-        await cmd.reply("https://redetach-music.web.app")
     elif command == "lenny":
         await cmd.reply("( ͡° ͜ʖ ͡°)")
     else:
